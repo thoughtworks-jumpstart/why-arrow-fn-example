@@ -1,8 +1,8 @@
 const printer = {
-  printBalance: function (getBalance) {
+  printBalance: function(getBalance) {
     console.log(getBalance());
   }
-}
+};
 
 class BankAccount {
   constructor(val) {
@@ -11,7 +11,7 @@ class BankAccount {
 
   getBalanceArrFn = () => {
     return this.val;
-  }
+  };
 
   printBalance() {
     printer.printBalance(this.getBalanceFn);
@@ -20,7 +20,7 @@ class BankAccount {
   getBalanceFn() {
     return this.val;
   }
-  
+
   printBalanceArr() {
     printer.printBalance(this.getBalanceArrFn);
   }
@@ -28,11 +28,10 @@ class BankAccount {
 
 const bobAccount = new BankAccount(5);
 
-
 try {
   bobAccount.printBalance();
-} catch(err) {
-  console.log(err.message)
+} catch (err) {
+  console.log(err.message);
 }
 
 bobAccount.printBalanceArr();

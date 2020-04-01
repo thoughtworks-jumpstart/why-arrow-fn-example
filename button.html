@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Button</title>
-</head>
-<body>
-<button id="normalBtn">normal fn</button>
-<button id="arrowBtn">arrow fn</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+  </head>
+  <body>
+    <button id="normalBtn">normal fn</button>
+    <button id="arrowBtn">arrow fn</button>
 
-<script>
-  this.text = "this should show";
-  function normalFn() {
-    alert(this.text);
-  }
+    <script>
+      this.text = "this should show";
+      function normalFn() {
+        alert(this.text);
+      }
 
-  var arrowFn = () => {
-    alert(this.text);
-  }
+      var arrowFn = () => {
+        alert(this.text);
+      };
 
-  document.getElementById("normalBtn").addEventListener("click", normalFn);
-  document.getElementById("arrowBtn").addEventListener("click", arrowFn);
-</script>
-</body>
+      document.getElementById("normalBtn").addEventListener("click", normalFn);
+      document.getElementById("arrowBtn").addEventListener("click", arrowFn);
+    </script>
+  </body>
 </html>
